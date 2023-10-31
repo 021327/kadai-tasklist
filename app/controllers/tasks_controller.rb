@@ -47,7 +47,7 @@ class TasksController < ApplicationController
   private
   
   def set_task
-    @task = Task.find(parms[:id])
+    @task = Task.find(params[:id])
   end
   
 

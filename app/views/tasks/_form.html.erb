@@ -2,13 +2,13 @@
 <% if task.errors.any? %>
     <div id="error_explanation">
       <ul>
-        <% task.errors.full_tasks.each do |tsk| %>
+        <% task.errors.full_messages.each do |tsk| %>
           <li><%= tsk %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
-  <%= f.label :status, 'タスク' %>
+  <%= f.label :status, 'ステータス' %>
   <%= f.text_field :status %>
   
   <%= f.label :content, 'タスク' %>
@@ -16,5 +16,3 @@
 
   <%= f.submit '投稿' %>
 <% end %>
-
-<%= link_to '一覧に戻る', tasks_path %>

@@ -4,13 +4,10 @@ class ApplicationController < ActionController::Base
   
   private
 
- def require_user_logged_in
+  def require_user_logged_in
+    #ログインしていなければ
     unless logged_in?
       redirect_to login_url
     end
-  end
-
-  def counts(user)
-    @count_tasklist = user.tasklist.count
   end
 end
